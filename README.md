@@ -34,6 +34,6 @@ THEN I am taken to the corresponding section of the README
 
 ## Application Screenshot
 
-![Professional Readme Screenshot]()
+![Professional Readme Screenshot](https://github.com/cesaralonsogarcia/professional-readme-generator/blob/main/images/professional-readme-generator.png)
 
 ## Walkthrough Video
