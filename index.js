@@ -1,8 +1,9 @@
-// Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -32,13 +33,13 @@ const questions = [
             'GNU General Public License v3.0',
             'MIT License',
             'BSD 2-Clause "Simplified" License',
-            'BSD 3-Cluase "New" or "Revised" License',
+            'BSD 3-Clause "New" or "Revised" License',
             'Boost Software License 1.0',
             'Creative Commons Zero v1.0 Universal',
             'Eclipse Public License 2.0',
-            'GNU Affero General Public License 2.0',
+            'GNU Affero General Public License 3.0',
             'GNU General Public License v2.0',
-            'GNU Lesser General Public License v2.1',
+            'GNU Lesser General Public License v3.0',
             'Mozilla Public License 2.0',
             'The Unlicense',
         ],
@@ -66,37 +67,22 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
-    const readmeContent = 
-        `# ${data.title}\n
-        ## Description\n
-        ${data.description}\n
-        ## Installation\n
-        ${data.installation}\n
-        ## Usage\n
-        ${data.usage}\n
-        ## License\n
-        ${data.license}\n
-        ## Credits\n
-        ${data.credits}\n
-        ## Tests\n
-        ${data.tests}\n
-        ## Questions\n
-        Link to my GitHub Profile: https://github.com/${data.github}   
-        You can also reach me by email at ${data.email} with more questions!`
-    fs.writeFile(fileName, readmeContent, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md!')
+    fs.writeFile(fileName, generateMarkdown(data), (err) =>
+        err ? console.log(err) : console.log('Successfully created README.md!')
     );
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer
-      .prompt(questions)
-      .then(answers => {
-        writeToFile(`${answers.title}-README.md`, answers)
-      });
+        .prompt(questions)
+        .then(answers => {
+            const title = `${answers.title}`;
+            const fileName = title.replace(' ', '-');
+            writeToFile(`${fileName}_README.md`, answers)
+        });
 }
 
 // Function call to initialize app
