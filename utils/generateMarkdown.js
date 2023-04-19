@@ -72,12 +72,13 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   const licenseLink = renderLicenseLink(license);
-  return `This application is covered under license ${license}. More information can be found on ${licenseLink}`;
+  return `This application is covered under the ${license}. More information can be found on ${licenseLink}`;
 }
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(`${data.license}`);
+  const licenseSection = renderLicenseSection(`${data.license}`);
   return `# ${data.title}
 ${licenseBadge}
 ## Description
@@ -86,7 +87,7 @@ ${data.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Credits](#credits)
+- [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
@@ -94,9 +95,9 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## License
-${renderLicenseSection(data.license)}
-## Credits
-${data.credits}
+${licenseSection}
+## Contributing
+${data.contributing}
 ## Tests
 ${data.tests}
 ## Questions

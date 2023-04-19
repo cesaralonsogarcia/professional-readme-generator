@@ -47,8 +47,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'credits',
-        message: 'What would you like to add to the Credits section?',
+        name: 'contributing',
+        message: 'What would you like to add to the Contributing section?',
     },
     {
         type: 'input',
