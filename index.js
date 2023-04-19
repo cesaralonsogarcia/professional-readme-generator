@@ -56,14 +56,36 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'What would you like to add to the Questions section?',
+        name: 'github',
+        message: 'What is your GitHub username?',
     },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?'
+    }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
+    const readmeContent = 
+        `# ${data.title}\n
+        ## Description\n
+        ${data.description}\n
+        ## Installation\n
+        ${data.installation}\n
+        ## Usage\n
+        ${data.usage}\n
+        ## License\n
+        ${data.license}\n
+        ## Credits\n
+        ${data.credits}\n
+        ## Tests\n
+        ${data.tests}\n
+        ## Questions\n
+        Link to my GitHub Profile: https://github.com/${data.github}   
+        You can also reach me by email at ${data.email} with more questions!`
+    fs.writeFile(fileName, readmeContent, (err) =>
     err ? console.log(err) : console.log('Successfully created README.md!')
     );
 }
@@ -73,7 +95,7 @@ function init() {
     inquirer
       .prompt(questions)
       .then(answers => {
-        console.log(answers);
+        writeToFile(`${answers.title}-README.md`, answers)
       });
 }
 
