@@ -35,7 +35,38 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+  switch (license) {
+    case 'Apache License 2.0':
+      return 'https://opensource.org/licenses/Apache-2.0';
+    case 'GNU General Public License v3.0':
+      return 'https://www.gnu.org/licenses/gpl-3.0';
+    case 'MIT License':
+      return 'https://opensource.org/licenses/MIT';
+    case 'BSD 2-Clause "Simplified" License':
+      return 'https://opensource.org/licenses/BSD-2-Clause';
+    case 'BSD 3-Clause "New" or "Revised" License':
+      return 'https://opensource.org/licenses/BSD-3-Clause';
+    case 'Boost Software License 1.0':
+      return 'https://www.boost.org/LICENSE_1_0.txt';
+    case 'Creative Commons Zero v1.0 Universal':
+      return 'http://creativecommons.org/publicdomain/zero/1.0/';
+    case 'Eclipse Public License 1.0':
+      return 'https://opensource.org/licenses/EPL-1.0';
+    case 'GNU Affero General Public License 3.0':
+      return 'https://www.gnu.org/licenses/agpl-3.0';
+    case 'GNU General Public License v2.0':
+      return 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html';
+    case 'GNU Lesser General Public License v3':
+      return 'https://www.gnu.org/licenses/lgpl-3.0';
+    case 'Mozilla Public License 2.0':
+      return 'https://opensource.org/licenses/MPL-2.0';
+    case 'The Unlicense':
+      return 'http://unlicense.org/';
+    default:
+      return '';
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
