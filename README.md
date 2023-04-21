@@ -36,4 +36,4 @@ THEN I am taken to the corresponding section of the README
 
 Click on the image to navigate to the video
 
-[<img src='https://github.com/cesaralonsogarcia/professional-readme-generator/blob/main/images/professional-readme-generator.png'>](https://watch.screencastify.com/v/E1QlCe0k1U2VUSrPW0bN "Professional README Generator)
+[<img src='https://github.com/cesaralonsogarcia/professional-readme-generator/blob/main/images/professional-readme-generator.png'>](https://watch.screencastify.com/v/E1QlCe0k1U2VUSrPW0bN "Professional README Generator")
