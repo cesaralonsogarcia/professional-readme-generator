@@ -1,7 +1,7 @@
-# Professional README Generator
+# Sample README
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
-This application dynamically generates a high-quality README file by using the command-line to allow the project created to devote more time to work on the project.
+This application creates a professional README file
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -10,15 +10,15 @@ This application dynamically generates a high-quality README file by using the c
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-First, download the files from GitHub. Then, install the required packages.
+First, download the GitHub repository. Then, run the application using the command line.
 ## Usage
-Use the command line to start the application and answer the questions to start generating the README
+Open a terminal, run the application by navigating to the folder where the files are located. Then, type "node index.js" in the terminal to start the application. Follow the prompts in the terminal and answer all the questions.
 ## License
 This application is covered under the MIT License. More information can be found on https://opensource.org/licenses/MIT
 ## Contributing
-I am always looking to improve the application. Please provide feedback using the contact information found in the Questions section.
+If you would like to contribute to this project, please reach out using the information found in the Questions section.
 ## Tests
-Not available at this time.
+No tests are available at this time.
 ## Questions
 Link to my GitHub Profile: https://github.com/cesaralonsogarcia  
 You can also reach me by email at cesarg324@gmail.com with more questions!
