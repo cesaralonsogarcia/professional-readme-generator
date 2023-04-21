@@ -32,8 +32,8 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents  
 THEN I am taken to the corresponding section of the README  
 
-## Application Screenshot
+## Application Screenshot and Walkthrough Video
 
-![Professional Readme Screenshot](https://github.com/cesaralonsogarcia/professional-readme-generator/blob/main/images/professional-readme-generator.png)
+Click on the image to navigate to the video
 
-## Walkthrough Video
+[<img src='https://github.com/cesaralonsogarcia/professional-readme-generator/blob/main/images/professional-readme-generator.png'>](https://watch.screencastify.com/v/E1QlCe0k1U2VUSrPW0bN "Professional README Generator)
